@@ -1,5 +1,6 @@
 import React from "react"
-import {css} from "@emotion/core"
+import { css } from "@emotion/core"
+import Navigation from "./nav"
 
 const Header = () => (
   <header
@@ -21,10 +22,13 @@ const Header = () => (
     >
       <h1
         css={css`
-          color: #FFF;
+          color: #fff;
           text-align: center;
         `}
-      >Header</h1>
+      >
+        Header
+      </h1>
+      <Navigation />
     </div>
   </header>
 )
