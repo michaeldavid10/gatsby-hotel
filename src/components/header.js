@@ -1,6 +1,6 @@
-import React from "react"
-import { css } from "@emotion/core"
-import Navigation from "./nav"
+import React from 'react'
+import { css } from '@emotion/core'
+import Navigation from './nav'
 
 const Header = () => (
   <header
@@ -26,7 +26,7 @@ const Header = () => (
           text-align: center;
         `}
       >
-        Header
+        Gatsby Hotel
       </h1>
       <Navigation />
     </div>
