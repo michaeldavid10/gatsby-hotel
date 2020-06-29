@@ -1,5 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
+import styled from '@emotion/styled'
+
+const ImageBackground = styled(BackgroundImage)`
+  height: 700px;
+`
 
 const HotelImage = () => {
   const { image } = useStaticQuery(graphql`
@@ -7,16 +13,18 @@ const HotelImage = () => {
       image: file(relativePath: { eq: "hotel.jpg" }) {
         sharp: childImageSharp {
           fluid {
-            srcSetWebp
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
     }
   `)
 
-  console.log(image)
+  // console.log(image)
 
-  return <h1>Imagen aqui</h1>
+  return (
+    <ImageBackground tag="section" fluid={image.sharp.fluid} fadeIn="soft" />
+  )
 }
 
 export default HotelImage
