@@ -5,7 +5,7 @@ import Navigation from './nav'
 const Header = () => (
   <header
     css={css`
-      background-color: #333;
+      background-color: #222;
       padding: 1rem;
     `}
   >
