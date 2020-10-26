@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import Image from 'gatsby-image';
 
 const IndexContent = () => {
   const info = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const IndexContent = () => {
       <h2>{titulo}</h2>
       <div>
         <p>{contenido}</p>
-        <img src={imagen.fluid.src} />
+        <Image fluid={imagen.fluid} />
       </div>
     </>
   )
