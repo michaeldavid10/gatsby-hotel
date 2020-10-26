@@ -16,13 +16,19 @@ const IndexContent = () => {
         }
       }
     }
-  `);
+  `)
 
-  console.log(info);
+  // console.log(info.allDatoCmsPagina.nodes[0]);
+
+  const { titulo, contenido, imagen } = info.allDatoCmsPagina.nodes[0]
 
   return (
     <>
-      <h2>Título de Página</h2>
+      <h2>{titulo}</h2>
+      <div>
+        <p>{contenido}</p>
+        <img src={imagen.fluid.src} />
+      </div>
     </>
   )
 }
